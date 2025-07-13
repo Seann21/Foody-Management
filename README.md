@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+<h1 align="center"> Foodyy FoodManager </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Preview](public/preview.png)
 
-Currently, two official plugins are available:
+FoodManager is a comprehensive web application designed to help users efficiently manage their food inventory. It provides robust features for adding, editing, deleting, and viewing food items, complete with search, filtering, and pagination capabilities. The app also includes user authentication, profile management, and a dynamic theme switcher for a personalized experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+-   **User Authentication:** Secure login and logout functionality with demo accounts.
+-   **Food CRUD Operations:**
+    -   **Add New Food:** Easily add new food items with details like name, category, price, description, and image.
+    -   **View Food List:** Browse all food items with a clear, paginated list.
+    -   **Edit Food:** Update existing food item details.
+    -   **Delete Food:** Remove food items from the inventory.
+-   **Search & Filter:** Efficiently find food items by name or description, and filter by category.
+-   **Pagination:** Navigate through large lists of food items with intuitive pagination controls.
+-   **User Profile Management:** Edit and update user's full name.
+-   **Theme Switching:** Toggle between Light, Dark, and System themes for a comfortable viewing experience.
+-   **Responsive Design:** A responsive and visually appealing design that adapts to various screen sizes.
+-   **Local Storage Persistence:** All data (user authentication and food items) is persisted locally in the browser's local storage.
+-   **Dashboard Overview:** A summary dashboard showing total foods, categories, average price, and recent additions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   **React:** A JavaScript library for building user interfaces.
+-   **Vite:** A fast build tool that provides a lightning-fast development experience.
+-   **TypeScript:** Adds type safety to JavaScript, improving code quality and maintainability.
+-   **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
+-   **React Router DOM:** For declarative routing in the application.
+-   **Local Storage:** Used for client-side data persistence (authentication and food inventory).
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To run this project locally, follow these steps:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1.  **Clone the repository:**
+    git clone [REPOSITORY_URL],
+    cd food-management-app
+2.  **Install dependencies:**
+    npm install
+3.  **Run the development server:**
+    npm run dev
+    The application will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Demo Accounts
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+You can use the following demo accounts to log in:
+
+-   **Username:** `admin` | **Password:** `admin123`
+
+---
+
+Feel free to contribute or provide feedback!
