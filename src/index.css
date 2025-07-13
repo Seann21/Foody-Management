@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+
+  body {
+    @apply transition-colors duration-200;
+  }
+
+  /* Force light mode as default */
+  :root {
+    color-scheme: light;
+  }
+
+  /* Dark mode styles */
+  :root.dark {
+    color-scheme: dark;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Debug styles - remove after testing */
+.debug-theme {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px;
+  z-index: 9999;
+  font-size: 12px;
+}
+
+
